@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ваш первый Китай — Авторский тур 2026',
+  title: 'Replay Life',
   description: 'От императорской истории до футуристических мегаполисов — без спешки и суеты. Пекин → Гуанчжоу → Шанхай, 4–17 марта 2026',
   generator: 'v0.app',
   icons: {
