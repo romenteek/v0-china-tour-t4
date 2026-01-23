@@ -37,7 +37,7 @@ export function Navigation() {
           className="hover:scale-105 transition-transform"
         >
           <Image
-            src="/images/replay-life-logo-vert-transp.png"
+            src="/images/replay-life-logo-transp.png"
             alt="Replay Life"
             width={320}
             height={240}
