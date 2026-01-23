@@ -50,7 +50,7 @@ export function PartiesSection() {
               <span className="text-[#FFC000] font-medium text-lg">За пультом для вас будут играть:</span>
             </div>
             <p className="text-2xl md:text-3xl font-heading text-[#FFFFFF] mb-4 uppercase tracking-wide">
-              Luter и Marchello
+              Luter и Marcello
             </p>
             <p className="text-[#c4a8e0] italic">
               Приготовьтесь топтать Китай!
