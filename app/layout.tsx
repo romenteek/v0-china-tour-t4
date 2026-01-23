@@ -8,12 +8,12 @@ import './globals.css'
 const organetto = localFont({
   src: [
     {
-      path: '../public/fonts/organetto-regular-semiext.ttf',
+      path: '../fonts/organetto-regular-semiext.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/organetto-bold-semiext.ttf',
+      path: '../fonts/organetto-bold-semiext.ttf',
       weight: '700',
       style: 'normal',
     },
@@ -26,22 +26,22 @@ const organetto = localFont({
 const gilroy = localFont({
   src: [
     {
-      path: '../public/fonts/gilroy-regular.ttf',
+      path: '../fonts/gilroy-regular.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/gilroy-medium.ttf',
+      path: '../fonts/gilroy-medium.ttf',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../public/fonts/gilroy-semibold.ttf',
+      path: '../fonts/gilroy-semibold.ttf',
       weight: '600',
       style: 'normal',
     },
     {
-      path: '../public/fonts/gilroy-bold.ttf',
+      path: '../fonts/gilroy-bold.ttf',
       weight: '700',
       style: 'normal',
     },
