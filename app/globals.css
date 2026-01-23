@@ -1,6 +1,56 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* Gilroy Font Family */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Organetto Font Family */
+@font-face {
+  font-family: 'Organetto';
+  src: url('/fonts/organetto-regular-semiext.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Organetto';
+  src: url('/fonts/organetto-bold-semiext.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -75,8 +125,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-sans), 'Gilroy', system-ui, sans-serif;
-  --font-heading: var(--font-heading), 'Organetto Semi Ext', system-ui, sans-serif;
+  --font-sans: 'Gilroy', system-ui, sans-serif;
+  --font-heading: 'Organetto', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
