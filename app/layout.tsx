@@ -1,23 +1,53 @@
 import React from "react"
 import type { Metadata } from 'next'
-import { Oswald, Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-// Using Oswald as a fallback for Organetto Semi Ext (extended, condensed display font)
-const oswald = Oswald({
-  subsets: ['latin', 'cyrillic'],
+// Organetto Semi Ext - Brand heading font
+const organetto = localFont({
+  src: [
+    {
+      path: '../public/fonts/organetto-regular-semiext.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/organetto-bold-semiext.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
   variable: '--font-heading',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
 });
 
-// Using Inter as a fallback for Gilroy (clean, modern sans-serif)
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
+// Gilroy - Brand body font
+const gilroy = localFont({
+  src: [
+    {
+      path: '../public/fonts/gilroy-regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/gilroy-medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/gilroy-semibold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/gilroy-bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
   variable: '--font-sans',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +55,7 @@ export const metadata: Metadata = {
   description: 'От императорской истории до футуристических мегаполисов — без спешки и суеты. Пекин → Гуанчжоу → Шанхай, 4–17 марта 2026',
   generator: 'v0.app',
   icons: {
-    icon: '/images/replay-life-logo-vert-transp.png',
+    icon: '/favicon-96x96.png',
   },
 }
 
@@ -36,7 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className="dark">
-      <body className={`${inter.variable} ${oswald.variable} font-sans antialiased`}>
+      <body className={`${gilroy.variable} ${organetto.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
