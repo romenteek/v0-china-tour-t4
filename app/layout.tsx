@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: 'От императорской истории до футуристических мегаполисов — без спешки и суеты. Пекин → Гуанчжоу → Шанхай, 4–17 марта 2026',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/images/replay-life-logo-vert-transp.png',
   },
 }
 
