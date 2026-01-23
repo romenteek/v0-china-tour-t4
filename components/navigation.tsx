@@ -39,9 +39,9 @@ export function Navigation() {
           <Image
             src="/images/replay-life-logo-vert-transp.png"
             alt="Replay Life"
-            width={160}
-            height={120}
-            className="h-24 w-auto"
+            width={320}
+            height={240}
+            className="h-48 w-auto md:h-48 h-32"
           />
         </a>
 

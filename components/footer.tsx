@@ -13,7 +13,7 @@ export function Footer() {
               height={45}
               className="h-10 w-auto"
             />
-            <span className="text-[#c4a8e0]">• 2026</span>
+            <span className="text-[#c4a8e0]">2026</span>
           </div>
           
           <p className="text-sm text-[#c4a8e0] text-center md:text-right">
