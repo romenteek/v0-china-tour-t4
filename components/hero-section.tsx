@@ -13,7 +13,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center pt-28 md:pt-0">
         <div className="mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4a0080]/50 backdrop-blur-sm border border-[#7000C1] text-sm text-[#c4a8e0]">
             <Calendar className="w-4 h-4 text-[#FFC000]" />
