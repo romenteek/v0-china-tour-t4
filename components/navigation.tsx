@@ -41,7 +41,7 @@ export function Navigation() {
             alt="Replay Life"
             width={320}
             height={240}
-            className="h-48 w-auto md:h-48 h-32"
+            className="h-24 w-auto md:h-32 lg:h-48"
           />
         </a>
 
