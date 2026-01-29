@@ -21,31 +21,31 @@ export function HeroSection() {
           </span>
         </div>
 
-        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-medium mb-6 text-balance animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 uppercase tracking-wide">
+        <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium mb-4 md:mb-6 text-balance animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 uppercase tracking-wide">
           <span className="text-[#FFC000]">Совместный тур в Китай</span>
           <br />
           <span className="text-[#FFFFFF]">Правильно и красиво</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-[#c4a8e0] max-w-2xl mx-auto mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+        <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-2xl mx-auto mb-6 md:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
           От императорской истории до футуристических мегаполисов — без спешки и суеты
         </p>
 
-        <div className="flex items-center justify-center gap-2 text-[#c4a8e0] mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
-          <MapPin className="w-5 h-5 text-[#FFC000]" />
-          <span className="text-lg tracking-wide">Пекин → Гуанчжоу → Шанхай</span>
+        <div className="flex items-center justify-center gap-2 text-[#c4a8e0] mb-8 md:mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
+          <MapPin className="w-4 h-4 md:w-5 md:h-5 text-[#FFC000]" />
+          <span className="text-base md:text-lg tracking-wide">Пекин → Гуанчжоу → Шанхай</span>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
           <a
             href="#cta"
-            className="px-8 py-4 bg-[#FFC000] text-[#300053] rounded-full text-lg font-medium glow-pulse hover:scale-105 transition-transform"
+            className="px-6 py-3 md:px-8 md:py-4 bg-[#FFC000] text-[#300053] rounded-full text-base md:text-lg font-medium glow-pulse hover:scale-105 transition-transform"
           >
             Оставить заявку
           </a>
           <a
             href="#route"
-            className="px-8 py-4 bg-[#4a0080]/50 backdrop-blur-sm text-[#FFFFFF] rounded-full text-lg font-medium border border-[#7000C1] hover:bg-[#4a0080]/70 transition-all hover:scale-105"
+            className="px-6 py-3 md:px-8 md:py-4 bg-[#4a0080]/50 backdrop-blur-sm text-[#FFFFFF] rounded-full text-base md:text-lg font-medium border border-[#7000C1] hover:bg-[#4a0080]/70 transition-all hover:scale-105"
           >
             Смотреть маршрут
           </a>

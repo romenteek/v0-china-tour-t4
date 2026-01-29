@@ -7,6 +7,8 @@ import Image from "next/image";
 const navLinks = [
   { href: "#about", label: "О туре" },
   { href: "#route", label: "Маршрут" },
+  { href: "#parties", label: "Вечеринки" },
+  { href: "#business", label: "Бизнес" },
   { href: "#comfort", label: "Комфорт" },
   { href: "#budget", label: "Бюджет" },
 ];
@@ -51,7 +53,7 @@ export function Navigation() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link, index) => (
             <a
               key={link.href}
@@ -70,9 +72,9 @@ export function Navigation() {
           </a>
         </div>
 
-        {/* Mobile Date & Menu Button */}
-        <div className="flex md:hidden items-center gap-3">
-          <span className="sm:hidden px-2 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs font-medium">
+        {/* Tablet & Mobile Menu Button */}
+        <div className="flex lg:hidden items-center gap-3">
+          <span className="hidden sm:inline-flex md:hidden px-2 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs font-medium">
             4–17 марта 2026
           </span>
           <button
@@ -85,9 +87,9 @@ export function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Tablet & Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#300053]/95 backdrop-blur-xl border-b border-[#7000C1] animate-in slide-in-from-top-2 fade-in duration-300">
+        <div className="lg:hidden bg-[#300053]/95 backdrop-blur-xl border-b border-[#7000C1] animate-in slide-in-from-top-2 fade-in duration-300">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
