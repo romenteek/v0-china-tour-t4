@@ -22,7 +22,7 @@ export function HeroSection() {
         </div>
 
         <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-medium mb-6 text-balance animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 uppercase tracking-wide">
-          <span className="text-[#FFC000]">Ваш первый Китай</span>
+          <span className="text-[#FFC000]">Совместный тур в Китай</span>
           <br />
           <span className="text-[#FFFFFF]">Правильно и красиво</span>
         </h1>

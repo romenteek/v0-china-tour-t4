@@ -32,18 +32,23 @@ export function Navigation() {
       }`}
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a
-          href="#"
-          className="hover:scale-105 transition-transform"
-        >
-          <Image
-            src="/images/replay-life-logo-transp.png"
-            alt="Replay Life"
-            width={320}
-            height={240}
-            className="h-24 w-auto md:h-32 lg:h-48"
-          />
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="#"
+            className="hover:scale-105 transition-transform"
+          >
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/REPLAY_LIFE_LOGO_transp_fixed-TZFeXz7PO97C0Wl6mVSCiph1qmnXio.png"
+              alt="Replay Life"
+              width={160}
+              height={60}
+              className="h-12 w-auto md:h-14"
+            />
+          </a>
+          <span className="hidden sm:inline-flex px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide">
+            4–17 марта 2026
+          </span>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -65,14 +70,19 @@ export function Navigation() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-[#FFFFFF] p-2"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Date & Menu Button */}
+        <div className="flex md:hidden items-center gap-3">
+          <span className="sm:hidden px-2 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs font-medium">
+            4–17 марта 2026
+          </span>
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-[#FFFFFF] p-2"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
