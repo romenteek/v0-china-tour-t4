@@ -22,7 +22,7 @@ const comfortFeatures = [
     text: "Продуманный ежедневный ритм",
   },
   {
-    icon: route,
+    icon: Route,
     text: "Комфортные трансферы",
   },
 
