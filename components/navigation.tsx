@@ -48,12 +48,12 @@ export function Navigation() {
             />
           </a>
           <span 
-            className={`inline-flex px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide transition-all duration-200 max-w-[140px] sm:max-w-none truncate ${
+            className={`inline-flex px-1.5 xs:px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-[10px] xs:text-xs md:text-sm font-medium tracking-wide transition-all duration-200 whitespace-nowrap ${
               isScrolled ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-0.5'
             }`}
           >
             <span className="hidden md:inline">Тур в Китай · 4–17 марта</span>
-            <span className="md:hidden">Китай · 4–17 марта</span>
+            <span className="md:hidden">4–17 марта</span>
           </span>
         </div>
 
