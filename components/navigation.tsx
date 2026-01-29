@@ -33,27 +33,26 @@ export function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+      <nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
           <a
             href="#"
-            className="hover:scale-105 transition-transform"
+            className="hover:scale-105 transition-transform shrink-0"
           >
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/REPLAY_LIFE_LOGO_transp_fixed-TZFeXz7PO97C0Wl6mVSCiph1qmnXio.png"
               alt="Replay Life"
               width={160}
               height={60}
-              className="h-12 w-auto md:h-14"
+              className="h-8 w-auto min-[376px]:h-10 sm:h-12 md:h-14"
             />
           </a>
           <span 
-            className={`inline-flex px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide transition-all duration-200 max-w-[140px] sm:max-w-none truncate ${
+            className={`inline-flex px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-[11px] min-[376px]:text-xs md:text-sm font-medium tracking-wide transition-all duration-200 whitespace-nowrap shrink-0 ${
               isScrolled ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-0.5'
             }`}
           >
-            <span className="hidden md:inline">Тур в Китай · 4–17 марта</span>
-            <span className="md:hidden">Китай · 4–17 марта</span>
+            Китай · 4–17 марта
           </span>
         </div>
 

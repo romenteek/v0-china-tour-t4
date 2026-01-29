@@ -26,7 +26,7 @@ const comfortFeatures = [
   },
   {
     icon: Route,
-    text: "Комфортные трансферы",
+    text: "Организованные трансферы",
   },
 
 ];
