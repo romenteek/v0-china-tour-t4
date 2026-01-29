@@ -46,7 +46,7 @@ export function Navigation() {
             />
           </a>
           <span className="hidden sm:inline-flex px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide">
-            4–17 марта 2026
+            Тур в Китай c 5 по 17 марта 2026
           </span>
         </div>
 
