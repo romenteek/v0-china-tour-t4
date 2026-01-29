@@ -20,7 +20,7 @@ export function HeroSection() {
           <span className="text-[#FFFFFF]">Правильно и красиво</span>
         </h1>
 
-        <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-2xl mx-auto mb-6 md:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+        <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-[320px] sm:max-w-md md:max-w-2xl mx-auto mb-6 md:mb-8 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
           От императорской истории до футуристических мегаполисов — без спешки и суеты
         </p>
 
