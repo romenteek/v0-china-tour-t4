@@ -30,7 +30,7 @@ export function AboutSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="py-20 md:py-32 relative overflow-hidden bg-[#300053]" ref={ref}
+    <section id="about" className="py-20 md:py-32 relative overflow-hidden bg-[#300053]" ref={ref}>
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#4a0080]/20 via-transparent to-transparent" />
       
