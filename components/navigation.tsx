@@ -7,10 +7,10 @@ import Image from "next/image";
 const navLinks = [
   { href: "#about", label: "О туре" },
   { href: "#route", label: "Маршрут" },
-  { href: "#parties", label: "Вечеринки" },
-  { href: "#business", label: "Бизнес" },
   { href: "#comfort", label: "Комфорт" },
   { href: "#budget", label: "Бюджет" },
+  { href: "#parties", label: "Вечеринки" },
+  { href: "#business", label: "Бизнес" },
 ];
 
 export function Navigation() {
