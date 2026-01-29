@@ -20,7 +20,7 @@ export function CTASection() {
           </p>
 
           <a
-            href="https://t.me/romanzhk"
+            href="https://t.me/SashaHohlova"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-10 py-5 bg-[#FFC000] text-[#300053] rounded-full text-xl font-medium glow-pulse hover:scale-105 transition-transform"
@@ -30,7 +30,7 @@ export function CTASection() {
           </a>
 
           <p className="mt-8 text-sm text-[#c4a8e0]">
-            Без предоплаты на старте • Формируется группа
+            Успей забронировать тур до 10.02.2026
           </p>
         </div>
       </div>

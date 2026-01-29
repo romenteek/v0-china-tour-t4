@@ -1,4 +1,4 @@
-import { Train, Plane, Building2, Moon, Clock } from "lucide-react";
+import { Train, Plane, Building2, Moon, Clock, Route } from "lucide-react";
 
 const comfortFeatures = [
   {
@@ -21,6 +21,11 @@ const comfortFeatures = [
     icon: Clock,
     text: "Продуманный ежедневный ритм",
   },
+  {
+    icon: route,
+    text: "Комфортные трансферы",
+  },
+
 ];
 
 export function ComfortSection() {
