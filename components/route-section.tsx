@@ -57,7 +57,7 @@ export function RouteSection() {
       <div className="container mx-auto px-6">
         <div className={`text-center mb-6 md:mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6 text-balance text-[#FFFFFF] uppercase tracking-wide">
-            Логичный и <span className="text-[#FFC000]">комфортный</span> маршрут
+            Логичный и <span className="text-[#FFC000]">продуманный</span> маршрут
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-3xl mx-auto text-pretty leading-relaxed">
             Мы перемещаемся с севера на юг и обратно без лишних переездов, используя скоростные поезда и короткие перелёты.
