@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const navLinks = [
   { href: "#about", label: "О туре" },
-  { href: "#route", label: "Маршрут" },
   { href: "#comfort", label: "Комфорт" },
-  { href: "#budget", label: "Бюджет" },
+  { href: "#route", label: "Маршрут" },
   { href: "#parties", label: "Вечеринки" },
   { href: "#business", label: "Бизнес" },
+  { href: "#budget", label: "Бюджет" },
 ];
 
 export function Navigation() {
@@ -47,8 +47,13 @@ export function Navigation() {
               className="h-12 w-auto md:h-14"
             />
           </a>
-          <span className="hidden sm:inline-flex px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide">
-            Тур в Китай c 5 по 17 марта 2026
+          <span 
+            className={`inline-flex px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide transition-all duration-200 max-w-[140px] sm:max-w-none truncate ${
+              isScrolled ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-0.5'
+            }`}
+          >
+            <span className="hidden md:inline">Тур в Китай · 4–17 марта</span>
+            <span className="md:hidden">Китай · 4–17 марта</span>
           </span>
         </div>
 
@@ -74,9 +79,6 @@ export function Navigation() {
 
         {/* Tablet & Mobile Menu Button */}
         <div className="flex lg:hidden items-center gap-3">
-          <span className="hidden sm:inline-flex md:hidden px-2 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs font-medium">
-            4–17 марта 2026
-          </span>
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

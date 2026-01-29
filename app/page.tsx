@@ -15,11 +15,11 @@ export default function ChinaTourPage() {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <RouteSection />
       <ComfortSection />
-      <BudgetSection />
+      <RouteSection />
       <PartiesSection />
       <BusinessSection />
+      <BudgetSection />
       <CTASection />
       <Footer />
     </main>

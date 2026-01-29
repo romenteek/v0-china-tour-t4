@@ -14,7 +14,7 @@ const comfortFeatures = [
   },
   {
     icon: Building2,
-    text: "Отели в центре городов",
+    text: "Отели в удобных локациях",
   },
   {
     icon: Moon,

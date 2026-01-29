@@ -1,4 +1,4 @@
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -14,20 +14,13 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center pt-28 md:pt-40 lg:pt-0">
-        <div className="mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4a0080]/50 backdrop-blur-sm border border-[#7000C1] text-sm text-[#c4a8e0]">
-            <Calendar className="w-4 h-4 text-[#FFC000]" />
-            4–17 марта 2026
-          </span>
-        </div>
-
-        <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium mb-4 md:mb-6 text-balance animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 uppercase tracking-wide">
+        <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium mb-4 md:mb-6 text-balance animate-in fade-in slide-in-from-bottom-6 duration-700 uppercase tracking-wide">
           <span className="text-[#FFC000]">Совместный тур в Китай</span>
           <br />
           <span className="text-[#FFFFFF]">Правильно и красиво</span>
         </h1>
 
-        <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-2xl mx-auto mb-6 md:mb-8 text-pretty animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+        <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-[320px] sm:max-w-md md:max-w-2xl mx-auto mb-6 md:mb-8 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
           От императорской истории до футуристических мегаполисов — без спешки и суеты
         </p>
 
