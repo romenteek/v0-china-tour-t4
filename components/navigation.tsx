@@ -48,7 +48,7 @@ export function Navigation() {
             />
           </a>
           <span 
-            className={`hidden sm:inline-flex px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide transition-all duration-200 ${
+            className={`inline-flex px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs md:text-sm font-medium tracking-wide transition-all duration-200 max-w-[140px] sm:max-w-none truncate ${
               isScrolled ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-0.5'
             }`}
           >
@@ -79,13 +79,6 @@ export function Navigation() {
 
         {/* Tablet & Mobile Menu Button */}
         <div className="flex lg:hidden items-center gap-3">
-          <span 
-            className={`hidden sm:inline-flex md:hidden px-2 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-xs font-medium transition-all duration-200 ${
-              isScrolled ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-0.5'
-            }`}
-          >
-            Китай · 4–17 марта
-          </span>
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
