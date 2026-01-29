@@ -52,8 +52,8 @@ export function Navigation() {
               isScrolled ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-0.5'
             }`}
           >
-            <span className="hidden min-[321px]:inline">Тур в Китай · 4–17 марта</span>
-            <span className="min-[321px]:hidden">Китай·4–17 марта</span>
+            <span className="max-[320px]:hidden">Тур в Китай · 4–17 марта</span>
+            <span className="hidden max-[320px]:inline">Китай·4–17 марта</span>
           </span>
         </div>
 
