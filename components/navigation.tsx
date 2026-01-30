@@ -40,7 +40,7 @@ export function Navigation() {
             className="hover:scale-105 transition-transform shrink-0"
           >
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/REPLAY_LIFE_LOGO_transp_fixed-TZFeXz7PO97C0Wl6mVSCiph1qmnXio.png"
+              src="/REPLAY_LIFE_LOGO_transp_fixed.png"
               alt="Replay Life"
               width={160}
               height={60}
