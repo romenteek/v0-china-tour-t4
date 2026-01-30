@@ -32,7 +32,7 @@ export function BudgetSection() {
         <div className="max-w-3xl mx-auto">
           <div className={`text-center mb-8 md:mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6 text-[#FFFFFF] uppercase tracking-wide">
-              Формат и <span className="text-[#FFC000]">бюджет</span>
+              Бюджет и <span className="text-[#FFC000]">формат</span>
             </h2>
           </div>
 
