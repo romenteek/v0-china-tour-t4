@@ -45,7 +45,7 @@ export function BudgetSection() {
               {/* Price */}
               <div className={`text-center transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`} style={{ transitionDelay: '300ms' }}>
                 <p className="text-sm md:text-base text-[#FFFFFF]/90 mb-2">Стоимость на одного человека:</p>
-                <p className="text-2xl md:text-3xl lg:text-4xl font-heading text-[#FFC000] uppercase tracking-wide">от 100 000 рублей</p>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-heading text-[#FFC000] uppercase tracking-wide">от 83 000 рублей</p>
                 <p className="text-xs md:text-sm text-[#c4a8e0] mt-2">(цена действительна на 31.01.2026)</p>
               </div>
 
