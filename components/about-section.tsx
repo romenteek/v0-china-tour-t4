@@ -1,28 +1,28 @@
 "use client";
 
-import { Sparkles, Users, Compass, Heart } from "lucide-react";
+import { Compass, Heart, Sparkles, Users } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const features = [
   {
     icon: Compass,
-    title: "Тем, кто едет в Китай впервые",
-    description: "Идеальное введение в культуру и атмосферу страны",
+    title: "Знакомство с современным Китаем",
+    description: "Три мегаполиса с разным характером, архитектурой и городским ритмом.",
   },
   {
     icon: Sparkles,
-    title: "Любителям городов и культуры",
-    description: "Три уникальных мегаполиса с богатой историей",
+    title: "Городская культура и кухня",
+    description: "Прогулки, локальные вкусы, вечерние районы и живой повседневный Китай.",
   },
   {
     icon: Heart,
-    title: "Тем, кто ценит комфорт",
-    description: "Продуманная логистика и удобный темп",
+    title: "Комфортный темп",
+    description: "Без перегруженной экскурсионной программы и гонки за галочками.",
   },
   {
     icon: Users,
-    title: "Тем, кто ищет новые бизнес возможности",
-    description: "Надежные и проверенные контакты по подбору товаров и поставщиков",
+    title: "Путешествие компанией",
+    description: "Совместный маршрут, поддержка на месте и достаточно пространства для себя.",
   },
 ];
 
@@ -30,49 +30,45 @@ export function AboutSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="py-20 md:py-32 relative overflow-hidden bg-[#300053]" ref={ref}>
-      {/* Background decoration */}
+    <section id="about" className="relative scroll-mt-24 overflow-hidden bg-[#300053] py-20 md:scroll-mt-28 md:py-32" ref={ref}>
       <div className="absolute inset-0 bg-gradient-to-b from-[#4a0080]/20 via-transparent to-transparent" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className={`text-center mb-12 md:mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6 text-balance text-[#FFFFFF] uppercase tracking-wide">
-            Почему этот тур <span className="text-[#FFC000]">другой</span>
+
+      <div className="container relative z-10 mx-auto px-6">
+        <div className={`mb-12 text-center transition-all duration-700 md:mb-20 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+          <h2 className="mb-4 text-balance font-heading text-2xl uppercase tracking-wide text-[#FFFFFF] sm:text-3xl md:mb-6 md:text-5xl lg:text-6xl">
+            Какой это <span className="text-[#FFC000]">тур</span>
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-3xl mx-auto text-pretty leading-relaxed">
-            Это не массовый туризм.<br />
-            Это продуманное путешествие для тех, кто хочет <em>почувствовать</em> Китай, а не просто увидеть его.
+          <p className="mx-auto max-w-3xl text-pretty text-base leading-relaxed text-[#c4a8e0] md:text-lg lg:text-xl">
+            Это обычное совместное туристическое путешествие для знакомства с современным Китаем: города, кухня, прогулки, архитектура и вечерняя жизнь.
           </p>
-          <p className="text-sm md:text-base text-[#c4a8e0] mt-4">
-            Свои люди. Комфортный темп. Умная логистика.
+          <p className="mt-4 text-sm text-[#c4a8e0] md:text-base">
+            С фокусом на города, атмосферу, еду, прогулки и вечеринки с Replay.
           </p>
         </div>
 
-        {/* Who is this for */}
-        <div className={`mb-6 md:mb-8 text-center transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h3 className="font-heading text-xl md:text-2xl lg:text-3xl text-[#FFFFFF]/90 uppercase tracking-wide">
+        <div className={`mb-6 text-center transition-all delay-200 duration-700 md:mb-8 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+          <h3 className="font-heading text-xl uppercase tracking-wide text-[#FFFFFF]/90 md:text-2xl lg:text-3xl">
             Кому подойдёт этот тур
           </h3>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`group relative p-6 md:p-8 rounded-2xl bg-[#3d0066]/50 backdrop-blur-sm border border-[#7000C1] hover:border-[#FFC000]/30 transition-all duration-500 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group relative rounded-lg border border-[#7000C1]/70 bg-[#3d0066]/55 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#FFC000]/40 md:p-8 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-[#FFC000]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+              <div className="absolute inset-0 rounded-lg bg-[#FFC000]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
               <div className="relative z-10">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#FFC000]/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-[#FFC000]/20 transition-colors duration-300">
-                  <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-[#FFC000]" />
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#FFC000]/10 transition-colors duration-300 group-hover:bg-[#FFC000]/20 md:mb-6 md:h-14 md:w-14">
+                  <feature.icon className="h-6 w-6 text-[#FFC000] md:h-7 md:w-7" />
                 </div>
-                <h4 className="font-medium text-base md:text-lg mb-2 md:mb-3 text-[#FFFFFF]">
+                <h4 className="mb-2 text-base font-medium text-[#FFFFFF] md:mb-3 md:text-lg">
                   {feature.title}
                 </h4>
-                <p className="text-[#c4a8e0] text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-[#c4a8e0]">
                   {feature.description}
                 </p>
               </div>

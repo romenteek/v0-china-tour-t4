@@ -2,40 +2,40 @@
 
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { tourConfig } from "@/lib/tour-config";
 
 export function CTASection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="cta" className="py-20 md:py-32 relative overflow-hidden bg-[#300053]" ref={ref}>
-      {/* Background effects */}
+    <section id="cta" className="relative scroll-mt-24 overflow-hidden bg-[#300053] py-20 md:scroll-mt-28 md:py-32" ref={ref}>
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FFC000]/5 via-transparent to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#FFC000]/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FFC000]/6 via-transparent to-transparent" />
+        <div className="absolute inset-x-6 top-1/2 h-px bg-gradient-to-r from-transparent via-[#FFC000]/45 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className={`font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6 text-balance text-[#FFFFFF] uppercase tracking-wide transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Китай проще, <span className="text-[#FFC000]">чем кажется</span>
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className={`mb-4 text-balance font-heading text-2xl uppercase tracking-wide text-[#FFFFFF] transition-all duration-700 sm:text-3xl md:mb-6 md:text-5xl lg:text-6xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+            Оставить <span className="text-[#FFC000]">заявку</span>
           </h2>
-          
-          <p className={`text-base md:text-lg lg:text-xl text-[#c4a8e0] mb-8 md:mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Когда маршрут продуман и всё уже организовано
+
+          <p className={`mb-8 text-base text-[#c4a8e0] transition-all delay-100 duration-700 md:mb-12 md:text-lg lg:text-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+            Напишите, если хотите попасть в предварительный список на {tourConfig.dates.display}. Мы пришлём детали после подтверждения программы и стоимости.
           </p>
 
           <a
             href="https://t.me/SashaHohlova"
             target="_blank"
             rel="noopener noreferrer"
-            className={`group inline-flex items-center gap-2 md:gap-3 px-6 py-3 md:px-10 md:py-5 bg-[#FFC000] text-[#300053] rounded-full text-base md:text-lg lg:text-xl font-medium glow-pulse hover:scale-105 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`group inline-flex items-center gap-2 rounded-lg bg-[#FFC000] px-6 py-3 text-base font-semibold text-[#300053] transition-all delay-200 duration-700 hover:bg-[#ffd34d] active:translate-y-px md:gap-3 md:px-10 md:py-5 md:text-lg lg:text-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
           >
-            Присоединиться к туру
-            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+            Оставить заявку в Telegram
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 md:h-5 md:w-5" />
           </a>
 
-          <p className={`mt-6 md:mt-8 text-xs md:text-sm text-[#c4a8e0] transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Успей забронировать тур до 10.02.2026
+          <p className={`mt-6 text-xs text-[#c4a8e0] transition-all delay-300 duration-700 md:mt-8 md:text-sm ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+            {tourConfig.dates.note} Стоимость, программа по дням, конкретные рейсы или поезда и отели требуют финального подтверждения.
           </p>
         </div>
       </div>
