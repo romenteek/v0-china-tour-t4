@@ -1,51 +1,24 @@
 "use client";
 
+import { Clock3, Plane, TrainFront } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { tourCities, tourConfig } from "@/lib/tour-config";
 
-const cities = [
+const cityStyles = [
   {
-    name: "Пекин",
-    subtitle: "начало знакомства с Китаем",
-    highlights: [
-      "Запретный город",
-      "Великая китайская стена",
-      "Вечеринка с Replay в клубе DaDa",
-      "Мягкое погружение в культуру",
-    ],
-    bgColor: "bg-gradient-to-br from-amber-500/20 to-orange-500/20",
-    accentColor: "text-amber-400",
-    dotColor: "bg-amber-400",
-    borderColor: "border-amber-500/30",
+    accent: "text-amber-300",
+    border: "border-amber-400/35",
+    surface: "from-amber-500/18 via-[#4a0080]/55 to-[#3d0066]/65",
   },
   {
-    name: "Гуанчжоу",
-    subtitle: "южный ритм Китая",
-    highlights: [
-      "Кантонская кухня",
-      "Современный мегаполис",
-      "Тёплые вечера и набережные",
-      "Индивидуальные поездки на фабрики",
-      "Новые полезные связи",
-    ],
-    bgColor: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20",
-    accentColor: "text-emerald-400",
-    dotColor: "bg-emerald-400",
-    borderColor: "border-emerald-500/30",
+    accent: "text-fuchsia-200",
+    border: "border-fuchsia-300/35",
+    surface: "from-fuchsia-500/18 via-[#4a0080]/55 to-[#3d0066]/65",
   },
   {
-    name: "Шанхай",
-    subtitle: "город будущего",
-    highlights: [
-      "Крупнейшая выставка текстиля",
-      "Французская концессия",
-      "Две вечеринки с Replay в стильных барах",
-      "Специальный бизнес-завтрак",
-      "Яркий финал путешествия",
-    ],
-    bgColor: "bg-gradient-to-br from-blue-500/20 to-indigo-500/20",
-    accentColor: "text-blue-400",
-    dotColor: "bg-blue-400",
-    borderColor: "border-blue-500/30",
+    accent: "text-sky-200",
+    border: "border-sky-300/35",
+    surface: "from-sky-500/18 via-[#4a0080]/55 to-[#3d0066]/65",
   },
 ];
 
@@ -53,71 +26,94 @@ export function RouteSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="route" className="py-20 md:py-32 relative overflow-hidden bg-[#300053]" ref={ref}>
-      <div className="container mx-auto px-6">
-        <div className={`text-center mb-6 md:mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6 text-balance text-[#FFFFFF] uppercase tracking-wide">
-            Логичный и <span className="text-[#FFC000]">продуманный</span> маршрут
+    <section
+      id="route"
+      className="relative scroll-mt-24 overflow-hidden bg-[#300053] py-20 md:scroll-mt-28 md:py-32"
+      ref={ref}
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,192,0,0.09),transparent_28%),linear-gradient(180deg,transparent,rgba(112,0,193,0.14),transparent)]" />
+      <div className="absolute left-6 right-6 top-12 h-px bg-gradient-to-r from-transparent via-[#FFC000]/45 to-transparent" />
+
+      <div className="container relative z-10 mx-auto px-6">
+        <div className={`mx-auto mb-10 max-w-4xl text-center transition-all duration-700 md:mb-14 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+          <h2 className="mb-4 text-balance font-heading text-2xl uppercase tracking-wide text-[#FFFFFF] sm:text-3xl md:mb-6 md:text-5xl lg:text-6xl">
+            Маршрут <span className="text-[#FFC000]">трёх городов</span>
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-[#c4a8e0] max-w-3xl mx-auto text-pretty leading-relaxed">
-            Мы перемещаемся с севера на юг и обратно без лишних переездов, используя скоростные поезда и короткие перелёты.
+          <p className="mx-auto max-w-3xl text-pretty text-base leading-relaxed text-[#c4a8e0] md:text-lg lg:text-xl">
+            {tourConfig.route.display}. {tourConfig.route.note} Между городами планируются самолёты или поезда, подобранные с учётом удобства и времени в пути.
           </p>
         </div>
 
-        {/* Route line connector */}
-        <div className="relative mt-12 md:mt-20">
-          {/* Vertical line for desktop */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#FFC000]/50 via-[#FFC000]/30 to-[#FFC000]/50" />
+        <div className={`relative mx-auto max-w-6xl rounded-lg border border-[#7000C1]/55 bg-[#260044]/55 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.22)] backdrop-blur transition-all delay-150 duration-700 md:p-6 lg:p-8 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+          <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-[#FFC000]/65 to-transparent" />
 
-          <div className="grid lg:grid-cols-1 gap-8 md:gap-16 lg:gap-24">
-            {cities.map((city, index) => (
-              <div
-                key={city.name}
-                className={`relative flex flex-col ${
-                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } items-center gap-6 md:gap-8 lg:gap-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                style={{ transitionDelay: `${300 + index * 150}ms` }}
-              >
-                {/* City number indicator */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[#300053] border-2 border-[#FFC000] items-center justify-center z-10">
-                  <span className="font-heading text-2xl text-[#FFC000]">{index + 1}</span>
-                </div>
+          <div className="mb-6 grid gap-3 border-b border-[#7000C1]/35 pb-5 md:grid-cols-[1fr_auto_1fr] md:items-center">
+            <div className="flex items-center gap-3 text-sm text-[#c4a8e0]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#FFC000]/35 bg-[#FFC000]/10 text-[#FFC000]">
+                <Clock3 className="h-5 w-5" />
+              </div>
+              <span>{tourConfig.dates.display}</span>
+            </div>
 
-                {/* Empty space for alignment */}
-                <div className="hidden lg:block flex-1" />
+            <div className="hidden items-center gap-2 text-[#FFC000] md:flex">
+              <span className="h-px w-10 bg-[#FFC000]/45" />
+              <Plane className="h-4 w-4" />
+              <TrainFront className="h-4 w-4" />
+              <span className="h-px w-10 bg-[#FFC000]/45" />
+            </div>
 
-                {/* City card */}
-                <div
-                  className={`flex-1 w-full max-w-xl p-6 md:p-8 rounded-3xl ${city.bgColor} backdrop-blur-sm border ${city.borderColor} relative overflow-hidden hover:scale-[1.02] transition-transform duration-300`}
+            <p className="text-sm leading-relaxed text-[#c4a8e0] md:text-right">
+              Порядок городов и финальную точку фиксируем после подтверждения программы.
+            </p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-3">
+            {tourCities.map((city, index) => {
+              const style = cityStyles[index] ?? cityStyles[0];
+
+              return (
+                <article
+                  key={city.name}
+                  className={`group relative overflow-hidden rounded-lg border ${style.border} bg-gradient-to-br ${style.surface} p-5 transition-all duration-500 hover:-translate-y-1 hover:border-[#FFC000]/55 md:p-6`}
+                  style={{ transitionDelay: `${250 + index * 120}ms` }}
                 >
-                  {/* Decorative elements */}
-                  <div className="absolute top-0 right-0 w-24 md:w-32 h-24 md:h-32 bg-white/5 rounded-full blur-2xl" />
-                  
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+                  <div className="absolute right-5 top-5 font-heading text-5xl text-[#FFFFFF]/5 transition-colors group-hover:text-[#FFC000]/10">
+                    0{index + 1}
+                  </div>
+
                   <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-2 lg:hidden">
-                      <span className={`font-heading text-lg md:text-xl ${city.accentColor}`}>{index + 1}</span>
-                      <div className="w-8 h-px bg-current opacity-30" />
+                    <div className="mb-5 flex items-center gap-3">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#FFC000]/45 bg-[#300053]/70 font-heading text-[#FFC000]">
+                        {index === 0 ? "S" : index + 1}
+                      </span>
+                      <span className="text-xs uppercase tracking-wide text-[#c4a8e0]">
+                        {index === 0 ? "вероятный старт" : "город маршрута"}
+                      </span>
                     </div>
-                    
-                    <h3 className="font-heading text-2xl md:text-3xl lg:text-4xl mb-2 text-[#FFFFFF] uppercase tracking-wide">
+
+                    <h3 className="mb-2 font-heading text-2xl uppercase tracking-wide text-[#FFFFFF] md:text-3xl">
                       {city.name}
                     </h3>
-                    <p className={`${city.accentColor} mb-4 md:mb-6 text-base md:text-lg`}>
+                    <p className={`${style.accent} mb-4 text-base md:text-lg`}>
                       {city.subtitle}
                     </p>
-                    
-                    <ul className="space-y-2 md:space-y-3">
+                    <p className="mb-5 text-sm leading-relaxed text-[#FFFFFF]/75 md:text-base">
+                      {city.description}
+                    </p>
+
+                    <ul className="space-y-2.5">
                       {city.highlights.map((highlight) => (
-                        <li key={highlight} className="flex items-center gap-2 md:gap-3 text-sm md:text-base text-[#FFFFFF]/80">
-                          <span className={`w-1.5 h-1.5 rounded-full ${city.dotColor}`} />
+                        <li key={highlight} className="flex items-start gap-3 text-sm leading-relaxed text-[#FFFFFF]/82 md:text-base">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FFC000]" />
                           {highlight}
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
-              </div>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

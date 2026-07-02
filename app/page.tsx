@@ -5,7 +5,6 @@ import { RouteSection } from "@/components/route-section";
 import { ComfortSection } from "@/components/comfort-section";
 import { BudgetSection } from "@/components/budget-section";
 import { PartiesSection } from "@/components/parties-section";
-import { BusinessSection } from "@/components/business-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
@@ -18,7 +17,6 @@ export default function ChinaTourPage() {
       <ComfortSection />
       <RouteSection />
       <PartiesSection />
-      <BusinessSection />
       <BudgetSection />
       <CTASection />
       <Footer />

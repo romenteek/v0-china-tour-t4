@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { tourConfig } from "@/lib/tour-config";
 
 const navLinks = [
-  { href: "#about", label: "О туре" },
+  { href: "#about", label: "Концепция" },
   { href: "#comfort", label: "Комфорт" },
   { href: "#route", label: "Маршрут" },
-  { href: "#parties", label: "Вечеринки" },
-  { href: "#business", label: "Бизнес" },
+  { href: "#parties", label: "Вечер" },
   { href: "#budget", label: "Бюджет" },
 ];
 
@@ -47,12 +47,12 @@ export function Navigation() {
               className="h-8 w-auto min-[376px]:h-10 sm:h-12 md:h-14"
             />
           </a>
-          <span 
-            className={`inline-flex px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-full text-[#FFC000] text-[11px] min-[376px]:text-xs md:text-sm font-medium tracking-wide transition-all duration-200 whitespace-nowrap shrink-0 ${
+          <span
+            className={`hidden sm:inline-flex px-2 sm:px-3 py-1 bg-[#FFC000]/10 border border-[#FFC000]/30 rounded-lg text-[#FFC000] text-[11px] min-[376px]:text-xs md:text-sm font-medium tracking-wide transition-all duration-200 whitespace-nowrap shrink-0 ${
               isScrolled ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-0.5'
             }`}
           >
-            Китай · 4–17 марта
+            Китай · {tourConfig.dates.shortDisplay}
           </span>
         </div>
 
@@ -70,7 +70,7 @@ export function Navigation() {
           ))}
           <a
             href="#cta"
-            className="px-5 py-2.5 bg-[#FFC000] text-[#300053] rounded-full text-sm font-medium hover:bg-[#FFC000]/90 transition-all hover:scale-105 animate-in fade-in zoom-in-95 duration-500 delay-700"
+            className="px-5 py-2.5 bg-[#FFC000] text-[#300053] rounded-lg text-sm font-semibold hover:bg-[#ffd34d] active:translate-y-px transition-all animate-in fade-in zoom-in-95 duration-500 delay-700"
           >
             Оставить заявку
           </a>
@@ -81,7 +81,8 @@ export function Navigation() {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-[#FFFFFF] p-2"
+            className="text-[#FFFFFF] p-2 rounded-lg border border-[#FFFFFF]/10 bg-[#FFFFFF]/5"
+            aria-label={isMobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -105,7 +106,7 @@ export function Navigation() {
             <a
               href="#cta"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="px-5 py-3 bg-[#FFC000] text-[#300053] rounded-full text-center font-medium mt-2"
+              className="px-5 py-3 bg-[#FFC000] text-[#300053] rounded-lg text-center font-semibold mt-2"
             >
               Оставить заявку
             </a>
