@@ -3,6 +3,10 @@
 import { Compass, Heart, Sparkles, Users } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
+const previousTourVideo = {
+  embedUrl: "https://vk.com/video_ext.php?oid=-2217821&id=456239304&hd=2",
+};
+
 const features = [
   {
     icon: Compass,
@@ -74,6 +78,25 @@ export function AboutSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div
+          className={`mx-auto mt-12 max-w-4xl text-center transition-all delay-700 duration-700 md:mt-16 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <h3 className="mb-5 font-heading text-xl uppercase tracking-wide text-[#FFFFFF] md:mb-7 md:text-2xl lg:text-3xl">
+            Как это было в прошлый раз
+          </h3>
+          <div className="overflow-hidden rounded-lg border border-[#7000C1]/70 bg-[#24003f] shadow-[0_24px_70px_rgba(0,0,0,0.28)]">
+            <div className="aspect-video">
+              <iframe
+                src={previousTourVideo.embedUrl}
+                title="Видео о прошлом туре Replay"
+                className="h-full w-full"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
