@@ -34,6 +34,10 @@ export function HeroSection() {
             </div>
           </div>
 
+          <p className="mx-auto lg:mx-0 -mt-5 mb-8 max-w-2xl text-xs leading-relaxed text-[#c4a8e0]/85 md:text-sm animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            {tourConfig.dates.note}
+          </p>
+
           <p className="mx-auto lg:mx-0 mb-10 max-w-2xl text-sm md:text-base text-[#c4a8e0] leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
             {tourConfig.positioning}
           </p>
