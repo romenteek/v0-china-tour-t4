@@ -9,7 +9,7 @@ const navLinks = [
   { href: "#about", label: "Концепция" },
   { href: "#comfort", label: "Комфорт" },
   { href: "#route", label: "Маршрут" },
-  { href: "#parties", label: "Вечер" },
+  { href: "#parties", label: "Вечеринки" },
   { href: "#budget", label: "Бюджет" },
 ];
 
