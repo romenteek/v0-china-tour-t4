@@ -61,9 +61,8 @@ export function HeroSection() {
           <div className="hidden animate-in fade-in slide-in-from-bottom-4 delay-300 duration-700 lg:block">
             <div className="relative rounded-lg border border-[#7000C1]/55 bg-[#260044]/55 p-7 shadow-[0_24px_80px_rgba(0,0,0,0.2)] backdrop-blur">
               <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-[#FFC000]/65 to-transparent" />
-              <div className="mb-6 flex items-center justify-between text-sm text-[#c4a8e0]">
+              <div className="mb-6 flex items-center text-sm text-[#c4a8e0]">
                 <span>Маршрут</span>
-                <span>{tourConfig.dates.display}</span>
               </div>
               <div className="space-y-5">
                 {tourConfig.route.cities.map((city, index) => (

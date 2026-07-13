@@ -21,7 +21,7 @@ export function CTASection() {
           </h2>
 
           <p className={`mb-8 text-base text-[#c4a8e0] transition-all delay-100 duration-700 md:mb-12 md:text-lg lg:text-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-            Напишите, если хотите попасть в предварительный список на {tourConfig.dates.display}. Мы пришлём детали после подтверждения программы и стоимости.
+            Напишите, если хотите попасть в предварительный список. Мы пришлём детали после подтверждения программы и стоимости.
           </p>
 
           <a
